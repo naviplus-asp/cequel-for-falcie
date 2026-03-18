@@ -24,7 +24,7 @@ DESC
 
   s.files = Dir['lib/**/*.rb', 'templates/**/*', 'spec/**/*.rb', '[A-Z]*']
   s.test_files = Dir['spec/examples/**/*.rb']
-  s.required_ruby_version = '>= 2.0'
+  s.required_ruby_version = '>= 3.1'
 
   s.add_runtime_dependency 'activemodel', '>= 4.0'
   s.add_runtime_dependency 'cassandra-driver', '~> 3.0'
