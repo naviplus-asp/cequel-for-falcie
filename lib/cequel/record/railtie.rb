@@ -52,7 +52,7 @@ module Cequel
 
         if File.exist?(config_path)
           config_yaml = ERB.new(File.read(config_path)).result
-          @configuration = YAML.load(config_yaml)[Rails.env]
+          @configuration = YAML.safe_load(config_yaml, aliases: true)[Rails.env]
             .deep_symbolize_keys
         else
           @configuration = {host: '127.0.0.1:9042'}
